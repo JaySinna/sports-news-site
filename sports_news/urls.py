@@ -1,5 +1,5 @@
 """
-URL configuration for sport_news project.
+URL configuration for sports_news project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
