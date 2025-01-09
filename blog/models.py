@@ -15,3 +15,4 @@ class Post(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
     sport = models.IntegerField(choices=SPORT)
+    excerpt = models.TextField(blank=True)
