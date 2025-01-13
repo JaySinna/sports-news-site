@@ -71,3 +71,31 @@ The site admin is also able to manage all user comments by choosing whether or n
 - This project was built using the steps from the code institute django codestar blog walkthrough project.
 - I followed the steps of the walkthrough project for guidance on setting up the site, and edited the post model so that I could filter the posts by each sport.
 - Once completed, I edited some of the text and background colors in the css file, and created additional views, urls, and templates for the pages displaying the posts of each individual sport.
+
+### Installs
+
+Packages installed for this project are:
+
+- django 4.2.1
+- gunicorn 20.1.0
+- dj-database-url 0.5.0
+- psycopg2 2.9.10
+- django-summernote 0.8.20.0
+- whitenoise 5.3.0
+- django-allauth 0.57.2
+- django-crispy-forms 2.3
+- crispy-bootstrap5 0.7
+- cloudinary 1.36.0
+- dj3-cloudinary-storage 0.0.6
+- urllib3 1.26.20
+
+## Testing
+
+### Validator Testing 
+
+- HTML
+  - No errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fcode-institute-org.github.io%2Flove-running-2.0%2Findex.html)
+- CSS
+  - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fvalidator.w3.org%2Fnu%2F%3Fdoc%3Dhttps%253A%252F%252Fcode-institute-org.github.io%252Flove-running-2.0%252Findex.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en#css)
+- Accessibility
+  - I confirmed that the colours and fonts chosen are easy to read and accessible by running it through lighthouse in devtools.
