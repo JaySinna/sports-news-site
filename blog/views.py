@@ -14,6 +14,12 @@ class PostList(generic.ListView):
     paginate_by = 6
 
 
+class FootballList(generic.ListView):
+    queryset = Post.objects.filter(sport=1)
+    template_name = "blog/football.html"
+    paginate_by = 6
+
+
 class TennisList(generic.ListView):
     queryset = Post.objects.filter(sport=2)
     template_name = "blog/tennis.html"
