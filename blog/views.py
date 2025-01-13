@@ -14,6 +14,12 @@ class PostList(generic.ListView):
     paginate_by = 6
 
 
+class BoxingList(generic.ListView):
+    queryset = Post.objects.filter(sport=3)
+    template_name = "blog/boxing.html"
+    paginate_by = 6
+
+
 def post_detail(request, slug):
     """
     Display an individual :model:`blog.Post`.
