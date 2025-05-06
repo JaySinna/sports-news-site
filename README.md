@@ -8,6 +8,8 @@ The site admin is able to manage all posts by creating, reading, updating or del
 The site admin is also able to manage all user comments by choosing whether or not to approve them.
 
 
+![Homepage](static/images/homepage.jpg)
+
 
 ## Features
 
@@ -64,6 +66,16 @@ The site admin is also able to manage all user comments by choosing whether or n
 - Automated testing files to ensure everything is working as it should be.
 - Detailed docstrings on python views and functions to explain what their purposes are.
 
+## Design Process
+
+- I based the design of this site partly on the code institute django blog project, and partly on the look and layout of various similar sports sites on the internet.
+- A key part of the design was to ensure that users had an easy and effective way of navigating to the different sport-specific pages, via clearly labelled links in the navbar.
+- Below are two hand-drawn basic wireframes from the beginning of the design process, outlining the desired layout of the homepage and sport-specific post pages on small screens, as well as medium and large screens.
+
+![Wireframe](static/images/small-design.jpg)
+
+![Wireframe](static/images/med-lar-design.jpg)
+
 ## Credits
 
 ### Content
@@ -71,6 +83,11 @@ The site admin is also able to manage all user comments by choosing whether or n
 - This project was built using the steps from the code institute django codestar blog walkthrough project.
 - I followed the steps of the walkthrough project for guidance on setting up the site, and edited the post model so that I could filter the posts by each sport.
 - Once completed, I edited some of the text and background colors in the css file, and created additional views, urls, and templates for the pages displaying the posts of each individual sport.
+
+### Media
+
+- The images were taken from google images.
+- The sports news articles were taken from various sports sites, including bbc.co.uk/sport, atptour.com, and boxingnewsonline.net.
 
 ### Installs
 
@@ -91,11 +108,40 @@ Packages installed for this project are:
 
 ## Testing
 
+### Manual Testing
+
+- All manual tests were carried out by logging in as a user or a site admin, depending on the test, and navigating through the site to ensure each section works as intended.
+- I have manually tested the core application functionality to ensure that each feature of the site meets the acceptance criteria in the user stories as follows:
+  - I have confirmed that users can register an account using an email, and can then successfully log in and out of their account.
+  - I have confirmed that logged in users can comment on a post.
+  - I have confirmed that users can click on a post to view a detailed page about the single post.
+  - I have confirmed that users can add, modify or delete their own comments on a post.
+  - I have confirmed that users can view a paginated list of posts on the homepage.
+  - I have confirmed that logged-in users are able to add and delete their own posts to the site.
+  - I have confirmed that users can click on the links to the other pages in the navbar, to be able to filter the posts for a specific sport.
+  - I have confirmed that the site admin can approve or disapprove comments.
+  - I have confirmed that the site admin can create draft posts.
+  - I have confirmed that the site admin can create, read, update and delete posts and comments from the site.
+
 ### Validator Testing 
 
 - HTML
-  - No errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fcode-institute-org.github.io%2Flove-running-2.0%2Findex.html)
+  - A few minor errors were returned when passing some HTML files through the official W3C HTML validator.
 - CSS
-  - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fvalidator.w3.org%2Fnu%2F%3Fdoc%3Dhttps%253A%252F%252Fcode-institute-org.github.io%252Flove-running-2.0%252Findex.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en#css)
+  - No errors were found when passing through the official W3C Jigsaw CSS validator.
 - Accessibility
   - I confirmed that the colours and fonts chosen are easy to read and accessible by running it through lighthouse in devtools.
+
+![Lighthouse Testing](static/images/lighthouse.jpg)
+
+## Deployment
+
+- The site was deployed to Heroku. The steps to deploy are as follows: 
+  - Create new app in Heroku, and connect it to the Github repository for the site.
+  - Create env.py file and set values of environment variables (database url, secret key and cloudinary url).
+  - Add env.py file to .gitignore file.
+  - Set config variables in Heroku settings tab.
+  - Set DEBUG=False in settings file.
+  - Create runtime.txt file.
+  - Commit and push all changes to Github.
+  - Navigate to deploy tab in Heroku, and click 'Deploy Branch' button.
